@@ -1,5 +1,5 @@
 {
-  "name": "template-nextjs",
+  "name": "nicolasteofilo-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src --max-warnings=0"
+  },
+  "author": "Nicolas Teófio <nicolasteofilodecastro@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nicolasteofilo/my-blog/issues"
+  },
+  "homepage": "https://github.com/nicolasteofilo/my-blog#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasteofilo/my-blog"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [

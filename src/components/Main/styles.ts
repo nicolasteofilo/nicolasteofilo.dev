@@ -5,7 +5,7 @@ export const Wrapper = styled.main`
   color: #fff;
   height: 100%;
   width: 100%;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
@@ -15,7 +15,7 @@ export const Wrapper = styled.main`
     background-color: #666666;
     padding: 0.2rem;
     border-radius: 5px;
-  }
+  } */
 `
 
 export const Logo = styled.img`

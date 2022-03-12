@@ -1,0 +1,21 @@
+{
+  "name": "NextJS Template",
+  "short_name": "NextJS Template",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/favicon.ico",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#06092B",
+  "description": "Typescript, ReactJS, NextJS and Styled Components Template!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#06092B"
+}

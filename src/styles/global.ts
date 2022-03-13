@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --background: #030518;
+    --background: #08070B;
     --white: #FFF;
   }
 
@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--background);
   }
 
   html {
@@ -18,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   body {

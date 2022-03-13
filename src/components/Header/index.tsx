@@ -1,5 +1,6 @@
 import * as S from './styles'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import Link from 'next/link'
 
 export function Header() {
   return (
@@ -11,6 +12,9 @@ export function Header() {
             <nav>
               <a>HOME</a>
               <a className="contact">CONTATO</a>
+              <Link href={'/blog'} prefetch>
+                <a>BLOG</a>
+              </Link>
             </nav>
           </S.Links>
           <S.SocialSection>

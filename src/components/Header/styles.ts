@@ -31,6 +31,7 @@ export const HeaderContent = styled.div`
       height: 5rem;
       line-height: 5rem;
       font-weight: bold;
+      color: var(--white);
 
       & + a {
         margin-left: 2rem;

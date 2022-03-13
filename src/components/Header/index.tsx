@@ -1,8 +1,16 @@
 import * as S from './styles'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export function Header() {
+  const router = useRouter()
+
+  function isActive(pathname: string) {
+    console.log(router?.asPath)
+    return pathname === router?.asPath ? true : false
+  }
+
   return (
     <>
       <S.Wrapper>
@@ -10,10 +18,16 @@ export function Header() {
           <S.Links>
             <S.Logo>NT</S.Logo>
             <nav>
-              <a>HOME</a>
-              <a className="contact">CONTATO</a>
+              <Link href={'/'}>
+                <S.Anchor href="/" active={isActive('/')}>
+                  HOME
+                </S.Anchor>
+              </Link>
+              <Link href={'#'}>
+                <S.Anchor className="contact">CONTATO</S.Anchor>
+              </Link>
               <Link href={'/blog'} prefetch>
-                <a>BLOG</a>
+                <S.Anchor>BLOG</S.Anchor>
               </Link>
             </nav>
           </S.Links>

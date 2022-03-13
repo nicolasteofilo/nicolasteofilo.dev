@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface AnchorProps {
+  active?: boolean
+}
+
 export const Wrapper = styled.header`
   height: 5rem;
   border-bottom: 1px solid var(--gray-800);
@@ -30,18 +34,23 @@ export const HeaderContent = styled.div`
       padding: 0 0.5rem;
       height: 5rem;
       line-height: 5rem;
-      font-weight: bold;
-      color: var(--white);
+      font-weight: thin;
+      color: var(--gray);
 
       & + a {
         margin-left: 2rem;
       }
 
       &:hover {
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid var(--white);
+        color: var(--white);
       }
     }
   }
+`
+
+export const Anchor = styled.a<AnchorProps>`
+  color: ${(props) => (props.active ? 'var(--white)' : 'var(--gray)')};
 `
 
 export const Links = styled.div`
@@ -61,6 +70,7 @@ export const Logo = styled.h1`
   font-family: 'Source Code Pro' !important;
   font-weight: bold;
   font-style: italic;
+  color: var(--white);
 `
 
 export const SocialSection = styled.div`

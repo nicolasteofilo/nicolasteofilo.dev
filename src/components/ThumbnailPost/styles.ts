@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.a`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +12,7 @@ export const Background = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 0.8rem;
   &:hover {
     background-color: #212024;
   }
@@ -26,6 +27,7 @@ export const Heading = styled.h1`
   font-weight: 500;
 
   margin-top: 2rem;
+  letter-spacing: 0.15rem;
 `
 
 export const Description = styled.p`
@@ -36,12 +38,13 @@ export const Description = styled.p`
   font-size: 1.5rem;
   margin-top: 1rem;
   max-width: 40rem;
+  letter-spacing: 0.1rem;
 `
 
 export const CoverImg = styled.img`
-  border-radius: 2rem;
+  border-radius: 1rem;
 
-  background-size: 40rem 7rem;
+  background-size: 50rem 7rem;
 
   @keyframes placeholderShimmer {
     0% {
@@ -51,4 +54,38 @@ export const CoverImg = styled.img`
       background-position: 40rem 0;
     }
   }
+`
+
+export const Info = styled.div`
+  display: flex;
+  background-color: transparent;
+
+  gap: 1rem;
+`
+
+export const Point = styled.h1`
+  background-color: transparent;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0.4rem;
+`
+
+export const Date = styled.p`
+  margin-top: 1rem;
+  background-color: transparent;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--white, #fff);
+`
+
+export const ReadTime = styled.p`
+  margin-top: 1rem;
+  background-color: transparent;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--white, #fff);
 `

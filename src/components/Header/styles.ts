@@ -7,9 +7,11 @@ interface AnchorProps {
 export const Wrapper = styled.header`
   height: 5rem;
   border-bottom: 1px solid var(--gray-800);
+  background-color: transparent;
 `
 
 export const HeaderContent = styled.div`
+  background-color: transparent;
   max-width: 1120px;
   height: 5rem;
   margin: 0 auto;
@@ -24,10 +26,12 @@ export const HeaderContent = styled.div`
   }
 
   nav {
+    background-color: transparent;
     margin-left: 3rem;
     height: 5rem;
 
     a {
+      background-color: transparent;
       font-size: 1.5rem;
       display: inline-block;
       position: relative;
@@ -56,10 +60,12 @@ export const HeaderContent = styled.div`
 `
 
 export const Anchor = styled.a<AnchorProps>`
+  background-color: transparent;
   color: ${(props) => (props.active ? 'var(--white)' : 'var(--gray)')};
 `
 
 export const Links = styled.div`
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,6 +79,7 @@ export const Links = styled.div`
 `
 
 export const Logo = styled.h1`
+  background-color: transparent;
   font-size: 3rem;
   font-family: 'Source Code Pro' !important;
   font-weight: bold;
@@ -81,12 +88,14 @@ export const Logo = styled.h1`
 `
 
 export const SocialSection = styled.div`
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-right: 2rem;
 
   a {
+    background-color: transparent;
     margin-left: 1rem;
     font-size: 1.5rem;
     color: var(--gray-800);

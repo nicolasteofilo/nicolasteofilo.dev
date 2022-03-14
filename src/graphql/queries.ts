@@ -5,6 +5,7 @@ export const GET_POSTS = gql`
     posts {
       id
       heading
+      description
       cover {
         width
         height

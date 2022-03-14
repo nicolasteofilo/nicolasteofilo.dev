@@ -36,6 +36,7 @@ export const HeaderContent = styled.div`
       line-height: 5rem;
       font-weight: thin;
       color: var(--gray);
+      cursor: pointer;
 
       & + a {
         margin-left: 2rem;
@@ -45,6 +46,11 @@ export const HeaderContent = styled.div`
         border-bottom: 1px solid var(--white);
         color: var(--white);
       }
+    }
+
+    @media (max-width: 768px) {
+      overflow-x: scroll;
+      display: flex;
     }
   }
 `
@@ -59,9 +65,10 @@ export const Links = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    .contact {
-      display: none;
-    }
+    overflow-x: scroll;
+    display: flex;
+
+    margin-right: 0.5rem;
   }
 `
 

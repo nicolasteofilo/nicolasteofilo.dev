@@ -26,8 +26,8 @@ export function Header() {
               <Link href={'#'}>
                 <S.Anchor className="contact">CONTATO</S.Anchor>
               </Link>
-              <Link href={'/blog'} prefetch>
-                <S.Anchor>BLOG</S.Anchor>
+              <Link href={'/articles'}>
+                <S.Anchor>ARTICLES</S.Anchor>
               </Link>
             </nav>
           </S.Links>

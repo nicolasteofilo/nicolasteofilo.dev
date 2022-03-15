@@ -30,7 +30,6 @@ export function ThumbnailPost({
   heading,
   cover,
   createdAt,
-  createdBy,
   body,
   description,
   slug

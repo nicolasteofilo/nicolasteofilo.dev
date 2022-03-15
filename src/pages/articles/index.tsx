@@ -5,12 +5,7 @@ import { client } from 'graphql/client'
 import { GET_POSTS, GET_TOTAL_POSTS } from 'graphql/queries'
 import * as S from 'styles/blog'
 
-export default function Blog(
-  { posts }: ThumbnailPostProps,
-  totalPosts: number
-) {
-  // console.log(totalPosts)
-
+export default function Blog({ posts }: ThumbnailPostProps) {
   return (
     <>
       <Header />

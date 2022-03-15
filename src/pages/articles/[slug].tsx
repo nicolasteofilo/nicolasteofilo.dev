@@ -5,15 +5,13 @@ import { client } from 'graphql/client'
 import { GET_POSTS_WITH_LIMIT, GET_POST_BY_SLUG } from 'graphql/queries'
 import { GetStaticProps } from 'next'
 import React from 'react'
-import * as S from './styles'
+import * as S from 'styles/article'
 
 interface PlaceProps {
   post: Post
 }
 
-export default function Place({ post }: PlaceProps) {
-  console.log(post)
-
+export default function Article({ post }: PlaceProps) {
   return (
     <>
       <S.Container>
@@ -35,8 +33,6 @@ export async function getStaticPaths() {
   const { posts } = await client.request(GET_POSTS_WITH_LIMIT, {
     first: 5
   })
-
-  console.log(posts)
 
   const paths = posts.map((post: Post) => ({
     params: {

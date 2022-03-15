@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-interface WrapperParalaxProps {
+export interface WrapperParalaxProps {
   image: string
 }
 

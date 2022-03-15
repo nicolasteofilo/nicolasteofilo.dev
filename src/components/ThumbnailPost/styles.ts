@@ -24,7 +24,7 @@ export const Heading = styled.h1`
   color: var(--white);
   background-color: transparent;
 
-  font-weight: 500;
+  font-weight: bold;
 
   margin-top: 2rem;
   letter-spacing: 0.15rem;

@@ -29,9 +29,26 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  @font-face {
+    font-family: 'Biotif';
+    src: url('/fonts/Biotif-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'Biotif-SemiBold';
+    src: url('/fonts/Biotif-SemiBold.ttf');
+  }
+
+  @font-face {
+    font-family: 'Biotif-Light';
+    src: url('/fonts/Biotif-Light.ttf');
+  }
+
+
   body {
     font-family: 'Lexend', sans-serif;
   }
+
 `
 
 export { GlobalStyles }

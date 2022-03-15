@@ -1,12 +1,9 @@
 import { Header } from 'components/Header'
 import { ThumbnailPost, ThumbnailPostProps } from 'components/ThumbnailPost'
+import { Title } from 'components/Title'
 import { client } from 'graphql/client'
 import { GET_POSTS, GET_TOTAL_POSTS } from 'graphql/queries'
 import * as S from 'styles/blog'
-
-interface BlogProps {
-  totalPosts: number
-}
 
 export default function Blog(
   { posts }: ThumbnailPostProps,
@@ -18,16 +15,18 @@ export default function Blog(
     <>
       <Header />
       <S.Wrapper>
-        <S.Heading>Tech. Development</S.Heading>
+        <Title fistColor="#ff80bf" secondColor="#0080ff">
+          Tech. Development
+        </Title>
         <br />
         <S.Description>
-          Here you will find all my
-          <S.CountPosts>{posts.length.toString()} articles</S.CountPosts> about
-          development, technology and more.
+          Aqui você encontrará todos os meus
+          <S.CountPosts>{posts.length.toString()} artigo(s)</S.CountPosts>{' '}
+          asobre desenvolvimento, tecnologia e muito mais.
         </S.Description>
         <S.Description>
-          I mainly talk about the javascript world like Nodejs, React and et
-          cetera
+          Eu falo principalmente sobre o mundo javascript como Nodejs, React e
+          etc.
         </S.Description>
       </S.Wrapper>
       <S.GridPosts>

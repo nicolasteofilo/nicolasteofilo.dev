@@ -5,11 +5,7 @@ import { useRouter } from 'next/router'
 
 export function Header() {
   const router = useRouter()
-
-  function isActive(pathname: string) {
-    console.log(router?.asPath)
-    return pathname === router?.asPath ? true : false
-  }
+  const path = router.asPath
 
   return (
     <>
@@ -19,12 +15,9 @@ export function Header() {
             <S.Logo>NT</S.Logo>
             <nav>
               <Link href={'/'}>
-                <S.Anchor href="/" active={isActive('/')}>
+                <S.Anchor href="/" active={path}>
                   HOME
                 </S.Anchor>
-              </Link>
-              <Link href={'#'}>
-                <S.Anchor className="contact">CONTATO</S.Anchor>
               </Link>
               <Link href={'/articles'}>
                 <S.Anchor>ARTICLES</S.Anchor>

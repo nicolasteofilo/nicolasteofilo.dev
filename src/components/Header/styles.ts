@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface AnchorProps {
-  active?: boolean
+  active?: string
 }
 
 export const Wrapper = styled.header`
@@ -28,7 +28,7 @@ export const HeaderContent = styled.div`
   nav {
     background-color: transparent;
     margin-left: 3rem;
-    height: 5rem;
+    /* height: 5rem; */
 
     a {
       background-color: transparent;
@@ -47,7 +47,6 @@ export const HeaderContent = styled.div`
       }
 
       &:hover {
-        border-bottom: 1px solid var(--white);
         color: var(--white);
       }
     }
@@ -61,7 +60,6 @@ export const HeaderContent = styled.div`
 
 export const Anchor = styled.a<AnchorProps>`
   background-color: transparent;
-  color: ${(props) => (props.active ? 'var(--white)' : 'var(--gray)')};
 `
 
 export const Links = styled.div`
@@ -104,6 +102,7 @@ export const SocialSection = styled.div`
 
     svg {
       color: #b5b3b9;
+      background-color: transparent;
 
       &:hover {
         color: var(--white);

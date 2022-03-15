@@ -1,27 +1,10 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.main`
+  max-width: 1100px;
+  margin: 0 auto;
   background-color: var(--background);
   color: #fff;
-  height: 100%;
-  width: 100%;
-  /*display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-
-  code {
-    font-style: italic;
-    background-color: #666666;
-    padding: 0.2rem;
-    border-radius: 5px;
-  } */
-`
-
-export const Logo = styled.img`
-  width: 15rem;
-  margin: 0 auto;
-  margin-bottom: 20px;
 `
 
 export const Title = styled.h1`
@@ -37,8 +20,45 @@ export const Description = styled.h2`
   }
 `
 
-export const Disclaimer = styled.p`
-  font-size: 1.5rem;
+export const CardInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const Avatar = styled.img`
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+`
+
+export const Text = styled.p`
+  font-family: 'Biotif', sans-serif;
+
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  color: #8f9ba8;
+  max-width: 300px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  br {
+    margin-top: 1rem;
+  }
+
+  p {
+    display: inline;
+    font-style: italic;
+  }
+`
+
+export const Highlight = styled.span`
+  color: var(--white);
+
+  a {
+    color: var(--white);
+    text-decoration: underline;
+    font-style: italic;
+  }
 `

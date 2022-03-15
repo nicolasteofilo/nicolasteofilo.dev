@@ -17,15 +17,14 @@ export default function Place({ post }: PlaceProps) {
   return (
     <>
       <S.Container>
-        <S.WrapperParalax image={post.cover.url}>
+        <S.WrapperParalax image={post?.cover?.url}>
           <Header />
           <div className="content">
-            <h1>{post.heading}</h1>
+            <h1>{post?.heading}</h1>
           </div>
         </S.WrapperParalax>
         <S.Wrapper>
-          <S.Body dangerouslySetInnerHTML={{ __html: post.body.html }} />
-          <S.Body dangerouslySetInnerHTML={{ __html: post.body.html }} />
+          <S.Body dangerouslySetInnerHTML={{ __html: post?.body?.html }} />
         </S.Wrapper>
       </S.Container>
     </>

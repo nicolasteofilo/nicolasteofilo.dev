@@ -55,11 +55,25 @@ export const Body = styled.div`
   padding: 20px 0px;
   color: #8d99a6;
 
-  code {
+  ul {
+    margin-left: 2rem;
+  }
+
+  pre {
     background-color: #141618;
-    color: #8d99a6;
-    padding: 0.2rem 0.5rem;
+    padding: 1rem;
     border-radius: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    code {
+      background-color: transparent;
+    }
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }

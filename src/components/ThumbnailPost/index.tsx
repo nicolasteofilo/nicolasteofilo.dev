@@ -59,7 +59,7 @@ export function ThumbnailPost({
               <S.Date>
                 {new Intl.DateTimeFormat('pt-BR').format(new Date(createdAt))}
               </S.Date>
-              <S.Point>.</S.Point>
+              <S.Point>•</S.Point>
               <S.ReadTime>{readTimeToShow()}</S.ReadTime>
             </S.Info>
           </S.Background>

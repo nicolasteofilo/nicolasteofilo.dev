@@ -23,6 +23,7 @@ export const Background = styled.div`
 export const Heading = styled.h1`
   color: var(--white);
   background-color: transparent;
+  font-family: 'Biotif-SemiBold';
 
   font-weight: bold;
 
@@ -32,11 +33,13 @@ export const Heading = styled.h1`
 
 export const Description = styled.p`
   background-color: transparent;
+  font-family: 'Biotif';
   font-weight: 200;
   color: #8f9ba8;
   display: flex;
   font-size: 1.5rem;
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   max-width: 40rem;
   letter-spacing: 0.1rem;
 `
@@ -80,6 +83,7 @@ export const Date = styled.p`
   font-weight: 100;
   font-size: 1.5rem;
   color: var(--white, #fff);
+  font-family: 'Biotif';
 `
 
 export const ReadTime = styled.p`
@@ -88,4 +92,5 @@ export const ReadTime = styled.p`
   font-weight: 100;
   font-size: 1.5rem;
   color: var(--white, #fff);
+  font-family: 'Biotif';
 `

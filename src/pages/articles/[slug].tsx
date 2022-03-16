@@ -16,11 +16,8 @@ export default function Article({ post }: PlaceProps) {
   return (
     <>
       <Head>
-        <title>{post.heading}</title>
+        <title>{post?.heading || 'Nicolas Teófio'}</title>
         <meta name="description" content={post.body.text} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
       </Head>
       <S.Container>
         <S.WrapperParalax image={post?.cover?.url}>

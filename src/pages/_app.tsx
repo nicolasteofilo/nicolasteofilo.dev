@@ -7,13 +7,13 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Blog | Nicolas Teófilo</title>
+        <title>Nicolas Teófilo</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#06092b" />
         <meta
           name="description"
-          content="Next.js template with typescript, jest, styled-components"
+          content="Olá, sou Nicolas, sou desenvolvedor Front-end, apaixonado por tecnologia e muito mais."
         />
       </Head>
       <GlobalStyles />

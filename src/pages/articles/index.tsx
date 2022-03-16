@@ -16,8 +16,8 @@ export default function Blog({ posts }: ThumbnailPostProps) {
         <br />
         <S.Description>
           Aqui você encontrará todos os meus
-          <S.CountPosts>{posts.length.toString()} artigo(s)</S.CountPosts>{' '}
-          asobre desenvolvimento, tecnologia e muito mais.
+          <S.CountPosts>{posts.length.toString()} artigo(s)</S.CountPosts> sobre
+          desenvolvimento, tecnologia e muito mais.
         </S.Description>
         <S.Description>
           Eu falo principalmente sobre o mundo javascript como Nodejs, React e

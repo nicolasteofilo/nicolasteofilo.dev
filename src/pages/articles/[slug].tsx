@@ -17,7 +17,7 @@ export default function Article({ post }: PlaceProps) {
     <>
       <Head>
         <title>{post?.heading || 'Nicolas Teófio'}</title>
-        <meta name="description" content={post.body.text} />
+        <meta name="description" content={post?.body?.text} />
       </Head>
       <S.Container>
         <S.WrapperParalax image={post?.cover?.url}>

@@ -13,17 +13,17 @@ export function Header() {
         <S.HeaderContent>
           <S.Links>
             <S.Logo>NT</S.Logo>
-            <nav>
-              <Link href={'/'}>
-                <S.Anchor href="/" active={path}>
-                  HOME
-                </S.Anchor>
-              </Link>
-              <Link href={'/articles'}>
-                <S.Anchor>ARTICLES</S.Anchor>
-              </Link>
-            </nav>
           </S.Links>
+          <nav>
+            <Link href={'/'}>
+              <S.Anchor href="/" active={path}>
+                HOME
+              </S.Anchor>
+            </Link>
+            <Link href={'/articles'}>
+              <S.Anchor>ARTICLES</S.Anchor>
+            </Link>
+          </nav>
           <S.SocialSection>
             <a
               href="https://github.com/nicolasteofilo"

@@ -5,6 +5,14 @@ export const Wrapper = styled.main`
   margin: 0 auto;
   background-color: var(--background);
   color: #fff;
+
+  @media (max-width: 1100px) {
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `
 
 export const Title = styled.h1`
@@ -23,6 +31,10 @@ export const Description = styled.h2`
 export const CardInfo = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 export const Avatar = styled.img`

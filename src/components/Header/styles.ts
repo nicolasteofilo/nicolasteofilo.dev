@@ -12,13 +12,10 @@ export const Wrapper = styled.header`
 
 export const HeaderContent = styled.div`
   background-color: transparent;
-  max-width: 1120px;
-  height: 5rem;
   margin: 0 auto;
   padding: 0 2rem;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   img {
@@ -75,7 +72,6 @@ export const Links = styled.div`
     margin-right: 0.5rem;
   }
 `
-
 export const Logo = styled.h1`
   background-color: transparent;
   font-size: 3rem;
@@ -83,6 +79,14 @@ export const Logo = styled.h1`
   font-weight: bold;
   font-style: italic;
   color: var(--white);
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `
 
 export const SocialSection = styled.div`
@@ -90,7 +94,6 @@ export const SocialSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 2rem;
 
   a {
     background-color: transparent;
@@ -106,6 +109,14 @@ export const SocialSection = styled.div`
 
       &:hover {
         color: var(--white);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
       }
     }
   }

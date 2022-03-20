@@ -15,14 +15,12 @@ export default function Blog({ posts }: ThumbnailPostProps) {
         </Title>
         <br />
         <S.Description>
-          Aqui você encontrará todos os meus
-          <S.CountPosts>{posts.length.toString()} artigo(s)</S.CountPosts> sobre
-          desenvolvimento, tecnologia e muito mais.
+          Aqui você encontrará todos os meus{' '}
+          <strong>{posts.length.toString()} artigo(s)</strong> sobre
+          desenvolvimento, tecnologia e muito mais. Eu falo principalmente sobre
+          o mundo javascript como Nodejs, React e etc.
         </S.Description>
-        <S.Description>
-          Eu falo principalmente sobre o mundo javascript como Nodejs, React e
-          etc.
-        </S.Description>
+        {/* <S.Description></S.Description> */}
       </S.Wrapper>
       <S.GridPosts>
         {posts.map((post) => (

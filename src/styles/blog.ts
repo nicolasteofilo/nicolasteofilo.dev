@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   max-width: 1100px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `
 
 export const GridPosts = styled.div`
@@ -41,14 +45,18 @@ export const Heading = styled.h1`
   margin-top: 2rem;
 `
 
-export const Description = styled.h5`
-  display: flex;
+export const Description = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 1rem;
   color: #8f9ba8;
 
   max-width: 900px;
+
+  strong {
+    font-weight: normal;
+    color: #fafafa;
+  }
 `
 
 export const CountPosts = styled.h5`

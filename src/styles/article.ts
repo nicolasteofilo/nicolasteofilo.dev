@@ -55,6 +55,23 @@ export const Body = styled.div`
   padding: 20px 0px;
   color: #8d99a6;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
   ul {
     margin-left: 2rem;
   }

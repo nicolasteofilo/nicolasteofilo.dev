@@ -26,7 +26,6 @@ export default function Article({ post }: PlaceProps) {
             <h1>{post?.heading}</h1>
           </div>
         </S.WrapperParalax>
-        <h1>{post?.heading}</h1>
         <S.Wrapper>
           <S.Body dangerouslySetInnerHTML={{ __html: post?.body?.html }} />
         </S.Wrapper>

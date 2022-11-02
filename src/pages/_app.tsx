@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#06092b" />
         <meta
           name="description"
-          content="Olá, sou Nicolas, sou desenvolvedor Front-end, apaixonado por tecnologia e muito mais."
+          content="Olá, sou Nicolas Teófilo, um entusiasta de desenvolvimento com as melhores tecnologias!"
         />
       </Head>
       <GlobalStyles />

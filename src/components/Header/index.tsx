@@ -1,12 +1,8 @@
 import * as S from './styles'
 import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 export function Header() {
-  const router = useRouter()
-  const path = router.asPath
-
   return (
     <>
       <S.Wrapper>
@@ -16,12 +12,7 @@ export function Header() {
           </S.Links>
           <nav>
             <Link href={'/'}>
-              <S.Anchor href="/" active={path}>
-                HOME
-              </S.Anchor>
-            </Link>
-            <Link href={'/articles'}>
-              <S.Anchor>ARTICLES</S.Anchor>
+              <S.Anchor href="/">HOME</S.Anchor>
             </Link>
           </nav>
           <S.SocialSection>

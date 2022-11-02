@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface AnchorProps {
-  active?: string
+  active?: boolean
 }
 
 export const Wrapper = styled.header`
@@ -25,28 +25,6 @@ export const HeaderContent = styled.div`
   nav {
     background-color: transparent;
     margin-left: 3rem;
-    /* height: 5rem; */
-
-    a {
-      background-color: transparent;
-      font-size: 1.5rem;
-      display: inline-block;
-      position: relative;
-      padding: 0 0.5rem;
-      height: 5rem;
-      line-height: 5rem;
-      font-weight: thin;
-      color: var(--gray);
-      cursor: pointer;
-
-      & + a {
-        margin-left: 2rem;
-      }
-
-      &:hover {
-        color: var(--white);
-      }
-    }
 
     @media (max-width: 768px) {
       overflow-x: scroll;
@@ -57,6 +35,26 @@ export const HeaderContent = styled.div`
 
 export const Anchor = styled.a<AnchorProps>`
   background-color: transparent;
+
+  background-color: transparent;
+  font-size: 1.5rem;
+  display: inline-block;
+  position: relative;
+  padding: 0 0.5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-weight: thin;
+  color: ${({ active }) => (active ? 'var(--gray)' : 'var(--white)')};
+
+  cursor: pointer;
+
+  & + a {
+    margin-left: 2rem;
+  }
+
+  &:hover {
+    color: var(--white);
+  }
 `
 
 export const Links = styled.div`

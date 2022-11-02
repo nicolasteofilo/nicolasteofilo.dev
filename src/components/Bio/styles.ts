@@ -2,6 +2,14 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.main`
   margin-top: 7rem;
+
+  > p {
+    font-size: 1.6rem;
+    font-family: 'Biotif';
+    color: var(--gray);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 `
 
 export const Title = styled.h1`
@@ -15,19 +23,26 @@ export const Phrase = styled.h2`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Biotif-SemiBold';
-  font-size: 1.8rem;
+  font-family: 'Biotif';
+  font-size: 1.6rem;
   font-weight: normal;
   margin-top: 1rem;
-  font-style: italic;
   border-left: 4px solid #212024;
-  padding-left: 1rem;
+  padding-left: 2rem;
+  font-style: italic;
+  color: var(--gray);
+  max-width: 700px;
 `
 
 export const Job = styled.div`
   font-family: 'Biotif-SemiBold';
   margin-top: 1rem;
   font-size: 1rem;
+
+  small {
+    font-size: 1.5rem;
+    font-family: 'Biotif';
+  }
 `
 
 export const HeadingJob = styled.h2``
@@ -36,6 +51,7 @@ export const JobSection = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-weight: 200;
 `
 
 export const Company = styled.a`

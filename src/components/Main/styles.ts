@@ -1,4 +1,18 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const blinkCursor = keyframes`
+  from { border-right: 2px solid rgba(255, 255, 255, 0.75); }
+  to { border-right: transparent }
+`
+
+const typing = keyframes`
+  from {
+    width: 0;
+  }
+  to {
+    width: 269px;
+  }
+`
 
 export const Wrapper = styled.main`
   max-width: 1100px;
@@ -46,23 +60,17 @@ export const Avatar = styled.img`
 
 export const Text = styled.p`
   font-family: 'Biotif', sans-serif;
-
   margin-top: 1rem;
-  font-size: 1.6rem;
-  margin-left: 2rem;
+  font-size: 2rem;
   color: #8f9ba8;
-  max-width: 300px;
-  line-height: 1.5;
+  width: 269px;
   font-weight: 400;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
 
-  br {
-    margin-top: 1rem;
-  }
-
-  p {
-    display: inline;
-    font-style: italic;
-  }
+  animation: ${blinkCursor} 700ms steps(40) infinite normal;
+  animation: ${typing} 4s steps(40) normal;
 `
 
 export const Highlight = styled.span`

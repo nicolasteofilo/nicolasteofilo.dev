@@ -9,12 +9,9 @@ const Main = () => (
     <Header />
     <S.Wrapper>
       <Title fistColor="#81FCEB" secondColor="#ffff80">
-        About Me
+        Sobre mim
       </Title>
-      <S.CardInfo>
-        <S.Avatar src="https://github.com/nicolasteofilo.png" alt="" />
-        <Description />
-      </S.CardInfo>
+      <Description />
       <Bio />
     </S.Wrapper>
   </>

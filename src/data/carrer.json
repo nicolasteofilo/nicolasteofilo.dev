@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "role": "Front-end Developer",
+    "company": {
+      "name": "DotCoding",
+      "site": "https://dotcoding.com.br/",
+      "localization": "Remote, Brasil"
+    },
+    "startDate": "Oct 2021",
+    "endDate": "Sep 2022",
+    "dateText": "1 yr"
+  }
+]

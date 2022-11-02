@@ -4,14 +4,6 @@ export function Bio() {
   return (
     <>
       <S.Wrapper>
-        <S.Title>Bio</S.Title>
-        <p>Entusiasta de desenvolvimento com as melhores tecnologias!</p>
-        <S.Phrase>
-          Nicolas Teófilo é um desenvolvedor de software. Atualmente vivendo em
-          Ribeirão Preto, São Paulo. Um admirador de desenvolvimento e
-          compartilhamento de conhecimento! Atualmente trabalhando como
-          desenvolvedor independente, mas sempre disposto a novos desafios.
-        </S.Phrase>
         <S.Title>Carreira</S.Title>
         <S.Job>
           <S.HeadingJob>Front-end Developer</S.HeadingJob>

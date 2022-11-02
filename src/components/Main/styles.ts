@@ -29,6 +29,31 @@ export const Container = styled.main`
   }
 `
 
+export const HiMessage = styled.p`
+  font-family: 'Biotif', sans-serif;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #8f9ba8;
+  width: 269px;
+  font-weight: 400;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: ${blinkCursor} 700ms steps(40) infinite normal;
+  animation: ${typing} 4s steps(40) normal;
+
+  span {
+    color: var(--white);
+
+    a {
+      color: var(--white);
+      text-decoration: underline;
+      font-style: italic;
+    }
+  }
+`
+
 export const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -49,13 +74,6 @@ export const CardInfo = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`
-
-export const Avatar = styled.img`
-  width: 300px;
-  height: 300px;
-  border-radius: 10%;
-  margin-top: 1rem;
 `
 
 export const Text = styled.p`

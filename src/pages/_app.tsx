@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import { GlobalStyles } from 'styles/global'
+import AppComponent from 'components/App'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
           content="Olá, sou Nicolas Teófilo, um entusiasta de desenvolvimento com as melhores tecnologias!"
         />
       </Head>
-      <GlobalStyles />
+      <AppComponent />
       <Component {...pageProps} />
     </>
   )

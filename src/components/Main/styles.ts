@@ -14,7 +14,7 @@ const typing = keyframes`
   }
 `
 
-export const Wrapper = styled.main`
+export const Container = styled.main`
   max-width: 1100px;
   margin: 0 auto;
   background-color: var(--background);

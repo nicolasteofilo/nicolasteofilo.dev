@@ -7,7 +7,7 @@ type HomeProps = {
   title: string
 }
 
-export function Home({ title }: HomeProps) {
+export default function Home({ title }: HomeProps) {
   return (
     <Container>
       <Title>{title}</Title>

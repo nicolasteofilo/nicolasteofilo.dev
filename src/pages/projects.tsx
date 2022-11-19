@@ -1,3 +1,5 @@
+import ProjectsTemplate from 'templates/Projects'
+
 export default function Projects() {
-  return <h1>Projects</h1>
+  return <ProjectsTemplate title="Trabalho. Hobby. pen Source." />
 }

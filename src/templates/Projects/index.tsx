@@ -2,6 +2,8 @@ import { Heading } from 'components/Heading'
 import { Title } from 'components/Title'
 import { Container, Description, ProjectsContainer } from './styles'
 
+import projects from 'data/projects.json'
+
 type ProjectsProps = {
   title: string
 }
@@ -19,24 +21,15 @@ export default function Projects({ title }: ProjectsProps) {
       <Heading className="project-year" text="2022" size={1.8} />
       <ProjectsContainer>
         <ul>
-          <li>
-            <a
-              href="https://github.com/nicolasteofilo/template-nextjs"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Next.Js Template
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/nicolasteofilo/my-contacts"
-              target="_blank"
-              rel="noreferrer"
-            >
-              MyContacts
-            </a>
-          </li>
+          {projects
+            .filter((project) => project.year === '2022')
+            .map((project) => (
+              <li key={project.year}>
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  {project.name}
+                </a>
+              </li>
+            ))}
         </ul>
       </ProjectsContainer>
     </Container>

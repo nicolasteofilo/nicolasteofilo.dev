@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 interface AnchorProps {
   active?: boolean
+  name: string
+  path: string
 }
 
 export const Wrapper = styled.header`
@@ -44,16 +46,13 @@ export const Anchor = styled.a<AnchorProps>`
   height: 5rem;
   line-height: 5rem;
   font-weight: thin;
-  color: ${({ active }) => (active ? 'var(--gray)' : 'var(--white)')};
+  color: ${({ name, path }) =>
+    name === path ? 'var(--white)' : 'var(--gray)'};
 
   cursor: pointer;
 
   & + a {
     margin-left: 2rem;
-  }
-
-  &:hover {
-    color: var(--white);
   }
 `
 

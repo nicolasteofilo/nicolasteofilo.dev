@@ -14,3 +14,18 @@ export const Container = styled.main`
     padding: 0 20px;
   }
 `
+
+export const Description = styled.p`
+  justify-content: center;
+  margin-top: 1rem;
+  max-width: 700px;
+
+  font-family: 'Biotif';
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--gray);
+
+  strong {
+    color: var(--white);
+  }
+`

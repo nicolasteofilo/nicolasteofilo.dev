@@ -14,6 +14,9 @@ export function Header() {
             <Link href={'/'}>
               <S.Anchor href="/">HOME</S.Anchor>
             </Link>
+            <Link href={'/projects'}>
+              <S.Anchor href="/projects">PROJETOS</S.Anchor>
+            </Link>
           </nav>
           <S.SocialSection>
             <a

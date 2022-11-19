@@ -1,5 +1,5 @@
-import { Main } from 'components/Main'
+import { Home as HomeTemplate } from 'templates/Home'
 
 export default function Home() {
-  return <Main />
+  return <HomeTemplate title="Sobre mim" />
 }

@@ -14,7 +14,7 @@ const typing = keyframes`
   }
 `
 
-export const Container = styled.main`
+export const Container = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   background-color: var(--background);
@@ -29,7 +29,7 @@ export const Container = styled.main`
   }
 `
 
-export const HiMessage = styled.p`
+export const HiMessage = styled.div`
   font-family: 'Biotif', sans-serif;
   margin-top: 1rem;
   font-size: 2rem;
@@ -39,9 +39,6 @@ export const HiMessage = styled.p`
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
-
-  animation: ${blinkCursor} 700ms steps(40) infinite normal;
-  animation: ${typing} 4s steps(40) normal;
 
   span {
     color: var(--white);

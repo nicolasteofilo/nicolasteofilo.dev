@@ -1,4 +1,3 @@
-import { Biography } from './components/Biography'
 import { Carrer } from './components/Carrer'
 
 export default function Home() {

@@ -3,7 +3,7 @@ import carrerData from 'data/carrer.json'
 export function Carrer() {
   return (
     <div>
-      <h2>Carreira</h2>
+      <h2>Career</h2>
       {carrerData.map((carrerItem) => (
         <div key={carrerItem.id}>
           <h3>{carrerItem.role}</h3>

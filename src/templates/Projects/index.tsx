@@ -1,7 +1,3 @@
-import { Heading } from 'components/Heading'
-import { Title } from 'components/Title'
-import { Container, Description, ProjectsContainer } from './styles'
-
 import projects from 'data/projects.json'
 
 type ProjectsProps = {
@@ -10,16 +6,16 @@ type ProjectsProps = {
 
 export default function Projects({ title }: ProjectsProps) {
   return (
-    <Container>
-      <Title>{title}</Title>
-      <Description>
+    <div>
+      <h1>{title}</h1>
+      <p>
         Eu realmente gosto muito de fazer projetos paralelos. Aqui você pode
         navegar por todos os meus <strong>websites, apps e templates</strong>{' '}
         que eu já fiz. Alguns projetos estão ativos e outros talves não.
-      </Description>
-      <Heading text="Todos Projetos" />
-      <Heading className="project-year" text="2022" size={1.8} />
-      <ProjectsContainer>
+      </p>
+      <h1>Todos Projetos</h1>
+      <h2>2022</h2>
+      <div>
         <ul>
           {projects
             .filter((project) => project.year === '2022')
@@ -31,7 +27,7 @@ export default function Projects({ title }: ProjectsProps) {
               </li>
             ))}
         </ul>
-      </ProjectsContainer>
-    </Container>
+      </div>
+    </div>
   )
 }

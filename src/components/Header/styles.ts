@@ -69,6 +69,28 @@ export const Links = styled.div`
     margin-right: 0.5rem;
   }
 `
+export const Nav = styled.nav`
+  a {
+    background-color: transparent;
+
+    background-color: transparent;
+    font-size: 1.5rem;
+    display: inline-block;
+    position: relative;
+    padding: 0 0.5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-weight: thin;
+    color: var(--white);
+
+    cursor: pointer;
+
+    & + a {
+      margin-left: 2rem;
+    }
+  }
+`
+
 export const Logo = styled.h1`
   background-color: transparent;
   font-size: 3rem;

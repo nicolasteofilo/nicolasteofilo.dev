@@ -6,28 +6,28 @@ export default function Footer() {
     {
       title: 'Email',
       url: '/contact',
-      icon: 'ri-mail-line',
+      icon: 'ri-mail-line'
     },
     {
       title: 'Twitter',
-      url: 'https://twitter.com/zenorocha',
-      icon: 'ri-twitter-line',
+      url: 'https://twitter.com/onicolasteofilo',
+      icon: 'ri-twitter-line'
     },
     {
       title: 'GitHub',
-      url: 'https://github.com/zenorocha',
-      icon: 'ri-github-line',
+      url: 'https://github.com/nicolasteofilo',
+      icon: 'ri-github-line'
     },
     {
       title: 'linkedin',
-      url: 'https://linkedin.com/in/zenorocha',
-      icon: 'ri-linkedin-line',
+      url: 'https://linkedin.com/in/nicolasteofilo',
+      icon: 'ri-linkedin-line'
     },
     {
       title: 'Instagram',
-      url: 'https://instagram.com/zenorocha',
-      icon: 'ri-instagram-line',
-    },
+      url: 'https://instagram.com/onicolasteofilo',
+      icon: 'ri-instagram-line'
+    }
   ]
 
   const renderAnchor = (link, index) => {

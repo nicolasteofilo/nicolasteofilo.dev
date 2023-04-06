@@ -84,4 +84,4 @@ Here you'll find all the CSS, images, and font files.
 
 ## License
 
-[MIT License](http://nicolasteofilo.mit-license.org/) © Nicola Teófilo
+[MIT License](http://nicolasteofilo.mit-license.org/) © Nicolas Teófilo

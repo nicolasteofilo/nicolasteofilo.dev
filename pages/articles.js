@@ -20,21 +20,18 @@ export async function getStaticProps() {
     'description',
   ]
 
-  const featuredPosts = [
-    getPostBySlug('lessons-learned-from-growing-a-6338-people-waitlist-in-7-weeks', featuredParams),
-    getPostBySlug('why-i-spent-25000-dollars-on-a-domain-or-how-to-pick-a-startup-name', featuredParams),
-  ]
+  const featuredPosts = [getPostBySlug('blog-teste', featuredParams)]
 
   return {
     props: {
-      title: 'Articles // Zeno Rocha',
+      title: 'Articles // Nicolas Teófilo',
       tagline: 'Stories. Updates. Guides.',
-      image: '/static/images/articles-bw.jpg',
+      image: '/static/images/pen-opt.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
       featuredPosts,
-      allPosts,
-    },
+      allPosts
+    }
   }
 }
 
@@ -72,8 +69,11 @@ function Articles(props) {
     })
   }
 
-  const { title, image } = props
-  const description = `Here you can find all the <strong>${props.allPosts.length} articles</strong> I wrote. You can read about web development, software engineering, and tech career in both English and Portuguese.`
+  const {
+    title,
+    image
+  } = props
+  const description = `Here you can find all <strong>${props.allPosts.length} articles</strong> I've written. You can read about web development, software engineering and technology careers in English and Portuguese (mainly Portuguese). I hope you enjoy :)`
 
   return (
     <>
@@ -82,18 +82,23 @@ function Articles(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://zenorocha.com/articles" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://nicolasteofilo.dev/articles" property="og:url" />
+        <meta
+          content={`https://nicolasteofilo.dev${image}`}
+          property="og:image"
+        />
       </Head>
 
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
 
         <h2>Featured Articles</h2>
-        <FeaturedArticles>{renderFeatured()}</FeaturedArticles>
+        {props.featuredPosts.length > 0 && (
+          <FeaturedArticles>{renderFeatured()}</FeaturedArticles>
+        )}
 
         <h2>All Articles</h2>
-        <ListGroup>{renderAll()}</ListGroup>
+        {props.allPosts.length > 0 && <ListGroup>{renderAll()}</ListGroup>}
       </AnimateSharedLayout>
     </>
   )

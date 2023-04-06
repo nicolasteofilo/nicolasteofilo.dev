@@ -9,9 +9,9 @@ import items from '../data/projects'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Projects // Zeno Rocha',
+    title: 'Projects // Nicolas Teófilo',
     tagline: 'Work. Hobby. Open Source.',
-    image: '/static/images/projects-bw.jpg',
+    image: '/static/images/projects.jpg',
     primaryColor: 'cyan',
     secondaryColor: 'green',
   }
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ['Dracula PRO', 'Clipboard.js', 'Resend', 'React Email']
+    const featured = ['Next.Js Template']
 
     return items
       .map(item => {

@@ -15,13 +15,13 @@ import downloadIcon from '../public/static/icons/download.json'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'About // Zeno Rocha',
+    title: 'About // Nicolas Teófilo',
     description:
-      "Zeno Rocha is a Brazilian creator and programmer. He currently lives in San Francisco, California, where he's the Founder & CEO at Resend. His lifelong appreciation for building software and sharing knowledge led him to speak in over 110 conferences worldwide. His passion for open source put him on the top 20 most active users on GitHub at age 22. Before moving to the US, Zeno developed multiple applications, mentored startups, and worked at major companies in Latin America, such as Globo and Petrobras.",
-    tagline: 'Create. Share. Repeat.',
+      'Nicolas Teófilo is a Brazilian content creator and programmer. He currently lives in Ribeirão Preto, São Paulo. He is very appreciative of all the steps that go into developing scalable, quality software. He currently works as a Back-end developer, working mainly with TypeScript.',
+    tagline: 'Code. Refactor. Repeat.',
     image: '/static/images/about-bw.jpg',
     primaryColor: 'pink',
-    secondaryColor: 'purple',
+    secondaryColor: 'purple'
   }
 
   return { props: meta }
@@ -40,12 +40,10 @@ function About(props) {
       <Container>
         <Section>
           <Image
-            alt="Zeno"
-            src="/static/images/zeno-bw.jpg"
+            alt="Nicolas"
+            src="/static/images/nicolas-bw.png"
             width="336"
             height="336"
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
             priority
           />
         </Section>
@@ -53,24 +51,23 @@ function About(props) {
           <Paragraph
             css={{
               marginTop: '16px',
-              '@bp2': { marginTop: '-6px' },
+              '@bp2': { marginTop: '-6px' }
             }}
           >
-            <strong>Hey, I'm Zeno Rocha</strong>
-            <Pronunciation />
-            I started as a software engineer back in 2009, working with Flash.
+            Hey, how are you? If you don't know me,{' '}
+            <strong>I'm Nicolas Teófilo. </strong>
+            I started programming around 2019/2020 with Python and JavaScript.
           </Paragraph>
           <Paragraph>
-            I'm the <strong>Founder & CEO</strong> at
-            Resend. Before that, I was a VP of Developer Experience at WorkOS and CPO at Liferay Cloud. I'm originally
-            from Brazil and now living in{' '}
-            <strong>San Francisco, California</strong> with my amazing wife and
-            beautiful daughter.
+            Currently I'm the <strong>Back-end Developer</strong> at Dotcoding.
+            Before that, I was a Front-end Developer at the same company. I was
+            born and live in Brazil.
           </Paragraph>
           <Paragraph>
-            <strong>I love dark mode</strong>, open source, and side projects.
-            When I'm not working, I like running, watching movies, and{' '}
-            <strong>eating cheese</strong>.
+            <strong>I love TypeScript</strong>, open source, and side projects.
+            When I'm not working, I like running, watching movies,{' '}
+            <strong>eating japanese food</strong> and{' '}
+            <strong>drink coffee</strong>.
           </Paragraph>
         </Section>
       </Container>
@@ -106,7 +103,7 @@ function About(props) {
             as="a"
             download
             role="button"
-            href="/static/images/zeno.png"
+            href="/static/images/nicolas.jpg"
             style={btnStyle}
             onClick={downloadHeadshot}
             onMouseEnter={() => downloadRef.current?.play()}
@@ -188,8 +185,11 @@ function About(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://zenorocha.com/about" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://nicolasteofilo.dev/about" property="og:url" />
+        <meta
+          content={`https://nicolasteofilo.dev${image}`}
+          property="og:image"
+        />
       </Head>
 
       {renderIntro()}
@@ -230,7 +230,7 @@ const ButtonsContainer = styled('p', {
 const Section = styled('div', {
   marginTop: '0px',
   width: 'auto',
-  '@bp2': { width: '48%' },
+  '@bp2': { width: '70%' },
 })
 
 About.Layout = Base

@@ -9,24 +9,14 @@ export default function Footer() {
       icon: 'ri-mail-line'
     },
     {
-      title: 'Twitter',
-      url: 'https://twitter.com/onicolasteofilo',
-      icon: 'ri-twitter-line'
-    },
-    {
       title: 'GitHub',
       url: 'https://github.com/nicolasteofilo',
       icon: 'ri-github-line'
     },
     {
-      title: 'linkedin',
+      title: 'Linkedin',
       url: 'https://linkedin.com/in/nicolasteofilo',
       icon: 'ri-linkedin-line'
-    },
-    {
-      title: 'Instagram',
-      url: 'https://instagram.com/onicolasteofilo',
-      icon: 'ri-instagram-line'
     }
   ]
 

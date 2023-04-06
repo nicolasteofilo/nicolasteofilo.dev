@@ -10,9 +10,9 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Nicolas Teófilo',
-      description: 'I love TypeScript & Coffe',
-      image: '/static/images/home-bw.jpg',
-    },
+      description: 'I love TypeScript & Coffee',
+      image: '/static/images/home-bw.jpg'
+    }
   }
 }
 

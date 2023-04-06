@@ -11,11 +11,11 @@ export default function Navbar() {
     'About',
     'Articles',
     'Projects',
-    'Talks',
-    'Podcasts',
-    'Investing',
     'Uses',
-    'Reminder',
+    // 'Talks',
+    // 'Podcasts',
+    // 'Investing',
+    // 'Reminder',
   ]
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()

@@ -6,13 +6,13 @@ import categories from '../data/uses'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Uses // Zeno Rocha',
+    title: 'Uses // Nicolas Teófilo',
     description:
-      "I often get messages asking about specific pieces of <strong>software or hardware I use</strong>. This not a static page, it's a <strong>living document</strong> with everything that I'm using nowadays.",
+      'Here contains the list of most of the tools that I use in my day-to-day as a developer.',
     tagline: 'Tools. Apps. Gear.',
     image: '/static/images/uses-bw.jpg',
     primaryColor: 'yellow',
-    secondaryColor: 'pink',
+    secondaryColor: 'pink'
   }
 
   return { props: meta }
@@ -53,8 +53,8 @@ function Uses(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://zenorocha.com/uses" property="og:url" />
-        <meta content={`https://zenorocha.com${image}`} property="og:image" />
+        <meta content="https://nicolasteofilo.dev/uses" property="og:url" />
+        <meta content={`https://nicolasteofilo.dev${image}`} property="og:image" />
       </Head>
 
       <p dangerouslySetInnerHTML={{ __html: description }} />

@@ -5,7 +5,7 @@ import Base from '../layouts/Base'
 import FeaturedProject from '../components/FeaturedProject'
 import { FeaturedProjects } from '../components/FeaturedProjects'
 import stripHtml from '../lib/strip-html'
-import items from '../data/projects'
+import { items, featured } from '../data/projects'
 
 export async function getStaticProps() {
   const meta = {
@@ -21,8 +21,6 @@ export async function getStaticProps() {
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ['Next.Js Template']
-
     return items
       .map(item => {
         return item.projects.filter(project => featured.includes(project.title))
@@ -80,7 +78,7 @@ function Projects(props) {
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
 
-        <h2>Featured Projects</h2>
+        {featured.length ? <h2>Featured Projects</h2> : null}
         <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
         <h2>All Projects</h2>
@@ -98,6 +96,8 @@ function ProjectItem(props) {
       <a href={project.url} target="_blank">
         {project.title}
       </a>
+      <br />
+      {project.description}
     </li>
   )
 }

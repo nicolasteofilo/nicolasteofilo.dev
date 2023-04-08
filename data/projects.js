@@ -19,11 +19,13 @@ const items = [
       {
         title: 'MyContacts',
         url: 'https://workos.com',
-        descriptio: 'Web tool for online management of all your contacts',
+        description: 'Web tool for online management of all your contacts',
         active: true
       }
     ]
   }
 ]
 
-export default items
+const featured = [];
+
+export { items, featured  }

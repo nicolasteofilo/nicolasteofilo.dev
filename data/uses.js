@@ -3,15 +3,9 @@ const categories = [
     name: 'Coding',
     items: [
       {
-        title: 'VSCode',
-        description:
-          'This is my main code editor, it provides me with everything I need, but every now and then it crashes really crazy.',
-        url: 'https://code.visualstudio.com'
-      },
-      {
         title: 'Neovim',
         description:
-          'This is my secondary editor that I use when I need to open a project faster and I only need to change a few small things.',
+         'This is my code editor, I chose it for the agility it provides with shortcuts and insane customization that I can do.',
         url: 'https://neovim.io/'
       },
       {

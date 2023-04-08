@@ -11,17 +11,6 @@ import { AnimateSharedLayout } from 'framer-motion'
 export async function getStaticProps() {
   const allPosts = getAllPosts(['date', 'skip', 'slug', 'title'])
 
-  const featuredParams = [
-    'date',
-    'slug',
-    'title',
-    'image',
-    'content',
-    'description',
-  ]
-
-  const featuredPosts = [getPostBySlug('blog-teste', featuredParams)]
-
   return {
     props: {
       title: 'Articles // Nicolas Teófilo',
@@ -29,7 +18,6 @@ export async function getStaticProps() {
       image: '/static/images/pen-opt.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
-      featuredPosts,
       allPosts
     }
   }
@@ -54,7 +42,7 @@ function Articles(props) {
   }
 
   const renderAll = () => {
-    return props.allPosts.map((post, index) => {
+    return props.allposts.length > 0 ? props.allposts.map((post, index) => {
       if (!post.skip) {
         return (
           <ListItem
@@ -66,7 +54,7 @@ function Articles(props) {
           />
         )
       }
-    })
+    }) : null
   }
 
   const {
@@ -91,11 +79,6 @@ function Articles(props) {
 
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
-
-        <h2>Featured Articles</h2>
-        {props.featuredPosts.length > 0 && (
-          <FeaturedArticles>{renderFeatured()}</FeaturedArticles>
-        )}
 
         <h2>All Articles</h2>
         {props.allPosts.length > 0 && <ListGroup>{renderAll()}</ListGroup>}

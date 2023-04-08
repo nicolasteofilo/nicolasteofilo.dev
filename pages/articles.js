@@ -2,7 +2,7 @@ import { styled } from '../stitches.config'
 import Head from 'next/head'
 import Base from '../layouts/Base'
 import stripHtml from '../lib/strip-html'
-import { getAllPosts, getPostBySlug } from '../lib/blog'
+import { getAllPosts } from '../lib/blog'
 import ListItem from '../components/ListItem'
 import FeaturedArticle from '../components/FeaturedArticle'
 import { ListGroup } from '../components/ListGroup'
@@ -80,8 +80,8 @@ function Articles(props) {
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
 
-        <h2>All Articles</h2>
-        {props.allPosts.length > 0 && <ListGroup>{renderAll()}</ListGroup>}
+        <h2>Articles</h2>
+        {props.allPosts.length > 0 ? <ListGroup>{renderAll()}</ListGroup> : <p>No articles found here yet :)</p>}
       </AnimateSharedLayout>
     </>
   )

@@ -24,23 +24,6 @@ export async function getStaticProps() {
 }
 
 function Articles(props) {
-  const renderFeatured = () => {
-    return props.featuredPosts.map((post, index) => {
-      return (
-        <FeaturedArticle
-          key={index}
-          index={index}
-          href={`/${post.slug}/`}
-          title={post.title}
-          description={post.description}
-          image={post.image}
-          stats={post.stats}
-          content={post.content}
-        />
-      )
-    })
-  }
-
   const renderAll = () => {
     return props.allposts.length > 0 ? props.allposts.map((post, index) => {
       if (!post.skip) {
@@ -79,7 +62,6 @@ function Articles(props) {
 
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
-
         <h2>Articles</h2>
         {props.allPosts.length > 0 ? <ListGroup>{renderAll()}</ListGroup> : <p>No articles found here yet :)</p>}
       </AnimateSharedLayout>

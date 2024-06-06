@@ -17,19 +17,19 @@ export default function ShortcutHome() {
     if (isMobile) {
       return (
         <ButtonPrimary as="button" onClick={query.toggle}>
-          Tap to start →
+          Pressione para iniciar →
         </ButtonPrimary>
       )
     } else if (isMac) {
       return (
         <ButtonPrimary as="button" onClick={query.toggle}>
-          Press <kbd>⌘</kbd> <kbd>K</kbd> to start →
+          Pressione <kbd>⌘</kbd> <kbd>K</kbd> para iniciar →
         </ButtonPrimary>
       )
     } else {
       return (
         <ButtonPrimary as="button" onClick={query.toggle}>
-          Press <kbd>ctrl</kbd> <kbd>K</kbd> to start →
+          Pressione <kbd>ctrl</kbd> <kbd>K</kbd> para iniciar →
         </ButtonPrimary>
       )
     }

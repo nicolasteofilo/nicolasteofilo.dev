@@ -13,8 +13,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: 'Articles // Nicolas Teófilo',
-      tagline: 'Stories. Updates. Guides.',
+      title: 'Artigos',
+      tagline: '',
       image: '/static/images/pen-opt.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
@@ -24,27 +24,32 @@ export async function getStaticProps() {
 }
 
 function Articles(props) {
-  const renderAll = () => {
-    return props.allposts.length > 0 ? props.allposts.map((post, index) => {
-      if (!post.skip) {
-        return (
-          <ListItem
-            key={index}
-            index={index}
-            href={`/${post.slug}/`}
-            title={post.title}
-            date={post.date}
-          />
-        )
+  function renderAll() {
+    if(props.allPosts) {
+      if (props?.allPosts?.length) {
+        return props.allPosts.map((post, index) => {
+          if (!post.skip) {
+            return (
+              <ListItem
+                key={index}
+                index={index}
+                href={`/${post.slug}/`}
+                title={post.title}
+                date={post.date}
+              />
+            )
+          }
+        })
       }
-    }) : null
+    }
+    return null;
   }
 
   const {
     title,
     image
   } = props
-  const description = `Here you can find all <strong>${props.allPosts.length} articles</strong> I've written. You can read about web development, software engineering and technology careers in English and Portuguese (mainly Portuguese). I hope you enjoy :)`
+  const description = `Aqui você pode encontrar os <strong>${props.allPosts.length} artigos</strong> que eu escrevi. Aqui você lerá sobre desenvolvimento web, engenharia de software e tecnologia em geral!. Espero que você goste :)`
 
   return (
     <>
@@ -53,7 +58,7 @@ function Articles(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://nicolasteofilo.dev/articles" property="og:url" />
+        <meta content="https://nicolasteofilo.dev/artigos" property="og:url" />
         <meta
           content={`https://nicolasteofilo.dev${image}`}
           property="og:image"
@@ -62,8 +67,8 @@ function Articles(props) {
 
       <AnimateSharedLayout>
         <p dangerouslySetInnerHTML={{ __html: description }} />
-        <h2>Articles</h2>
-        {props.allPosts.length > 0 ? <ListGroup>{renderAll()}</ListGroup> : <p>No articles found here yet :)</p>}
+        <h2>Artigos</h2>
+        {props.allPosts.length > 0 ? <ListGroup>{renderAll()}</ListGroup> : <p>Nenhum artigo encontrado aqui ainda :)</p>}
       </AnimateSharedLayout>
     </>
   )

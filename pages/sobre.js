@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { parseISO, format, intervalToDuration } from 'date-fns'
 import Base from '../layouts/Base'
 import { ButtonPrimary } from '../components/ButtonPrimary'
-import Pronunciation from '../components/Pronunciation'
 import Toast from '../components/Toast'
 import stripHtml from '../lib/strip-html'
 import items from '../data/about'
@@ -15,10 +14,10 @@ import downloadIcon from '../public/static/icons/download.json'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'About // Nicolas Teófilo',
+    title: 'Sobre // Nicolas Teófilo',
     description:
-      'Nicolas Teófilo is a Brazilian content creator and programmer. He currently lives in Ribeirão Preto, São Paulo. He is very appreciative of all the steps that go into developing scalable, quality software. He currently works as a Back-end developer, working mainly with TypeScript.',
-    tagline: 'Code. Refactor. Repeat.',
+      'Nicolas Teófilo é um desenvolvedor full-stack. Ele aprecia todas as etapas do desenvolvimento de softwares escaláveis e com qualidade. Atualmente é um desenvolvedor freelancer, trabalhando principalmente com Javascript.',
+    tagline: 'Sobre mim',
     image: '/static/images/about-bw.jpg',
     primaryColor: 'pink',
     secondaryColor: 'purple'
@@ -42,8 +41,8 @@ function About(props) {
           <Image
             alt="Nicolas"
             src="/static/images/nicolas-bw.png"
-            width="336"
-            height="336"
+            width="300"
+            height="300"
             priority
           />
         </Section>
@@ -54,66 +53,22 @@ function About(props) {
               '@bp2': { marginTop: '-6px' }
             }}
           >
-            Hey, how are you? If you don't know me,{' '}
-            <strong>I'm Nicolas Teófilo. </strong>
-            I started programming around 2019/2020 with Python and JavaScript.
+            Olá, tudo bem? <strong>Meu nome é Nicolas.</strong>
           </Paragraph>
           <Paragraph>
-            Currently I'm the <strong>Back-end Developer</strong> at Dotcoding.
-            Before that, I was a Front-end Developer at the same company. I was
-            born and live in Brazil.
+            Atualmente, sou <strong>desenvolvedor freelancer</strong>{' '}
+            especializado em criar aplicações de alta qualidade utilizando
+            tecnologias do ecossistema JavaScript, como Node.js e React.js.
+            Tenho experiência e paixão por desenvolver soluções robustas e
+            eficientes que atendem às necessidades dos meus clientes.
           </Paragraph>
           <Paragraph>
-            <strong>I love TypeScript</strong>, open source, and side projects.
-            When I'm not working, I like running, watching movies,{' '}
-            <strong>eating japanese food</strong> and{' '}
-            <strong>drink coffee</strong>.
+            Se precisar de um profissional comprometido e atualizado com as
+            melhores práticas de desenvolvimento, estou à disposição para
+            colaborar em seus projetos.
           </Paragraph>
         </Section>
       </Container>
-    )
-  }
-
-  const renderBio = () => {
-    const btnStyle = { display: 'inline-flex', justifyContent: 'center', alignItems: 'center' }
-    const iconStyle = { width: 24, height: 24, marginRight: 8 }
-
-    return (
-      <div>
-        <p>
-          This is made for journalists, podcast hosts, and event organizers to
-          copy-and-paste.
-        </p>
-        <blockquote>
-          <p>{description}</p>
-        </blockquote>
-        <ButtonsContainer>
-          <ButtonPrimary
-            as="button"
-            style={btnStyle}
-            onClick={copyBio}
-            onMouseEnter={() => copyBioRef.current?.play()}
-            onMouseLeave={() => copyBioRef.current?.stop()}
-          >
-            <Lottie lottieRef={copyBioRef} style={iconStyle} animationData={copyBioIcon} loop={false} autoplay={false} />
-            Copy Bio
-          </ButtonPrimary>
-          <span style={{ margin: '0 20px 0 10px' }}>•</span>
-          <ButtonPrimary
-            as="a"
-            download
-            role="button"
-            href="/static/images/nicolas.jpg"
-            style={btnStyle}
-            onClick={downloadHeadshot}
-            onMouseEnter={() => downloadRef.current?.play()}
-            onMouseLeave={() => downloadRef.current?.stop()}
-          >
-            <Lottie lottieRef={downloadRef} style={iconStyle} animationData={downloadIcon} loop={false} autoplay={false} />
-            Download Headshot
-          </ButtonPrimary>
-        </ButtonsContainer>
-      </div>
     )
   }
 
@@ -147,35 +102,20 @@ function About(props) {
   const getDuration = (startDate, endDate) => {
     const durationObj = intervalToDuration({
       start: parseISO(startDate),
-      end: endDate ? parseISO(endDate) : new Date(),
+      end: endDate ? parseISO(endDate) : new Date()
     })
 
     let durationStr = ''
 
     if (durationObj.years > 1) {
-      durationStr = `${durationObj.years} yrs `
+      durationStr = `${durationObj.years} anos `
     } else if (durationObj.years === 1) {
-      durationStr = `${durationObj.years} yr `
+      durationStr = `${durationObj.years} ano `
     }
 
-    durationStr += `${durationObj.months} mos`
+    durationStr += `${durationObj.months} meses`
 
     return durationStr
-  }
-
-  const downloadHeadshot = () => {
-    setToastTitle('Downloading...')
-    setToastDescription('You can now add this photo to your fancy site.')
-    setShowToast(true)
-  }
-
-  const copyBio = e => {
-    e.preventDefault()
-    navigator.clipboard.writeText(description)
-
-    setToastTitle('Copied :D')
-    setToastDescription('You can now paste it anywhere.')
-    setShowToast(true)
   }
 
   return (
@@ -194,10 +134,9 @@ function About(props) {
 
       {renderIntro()}
 
-      <h2>Bio</h2>
-      {renderBio()}
+      <h2>Tecnologias</h2>
 
-      <h2>Career</h2>
+      <h2>Carreira</h2>
       {renderAll()}
 
       <Toast
@@ -215,22 +154,22 @@ const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  '@bp2': { flexDirection: 'row' },
+  '@bp2': { flexDirection: 'row' }
 })
 
 const Paragraph = styled('p', {
-  '@bp2': { margin: '15px 0' },
+  '@bp2': { margin: '15px 0' }
 })
 
 const ButtonsContainer = styled('p', {
   display: 'flex',
-  alignItems: 'center',
+  alignItems: 'center'
 })
 
 const Section = styled('div', {
   marginTop: '0px',
   width: 'auto',
-  '@bp2': { width: '70%' },
+  '@bp2': { width: '70%' }
 })
 
 About.Layout = Base

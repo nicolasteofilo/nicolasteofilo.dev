@@ -10,7 +10,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: 'Nicolas Teófilo',
-      description: 'I love TypeScript & Coffee',
+      description: ' ',
       image: '/static/images/home-bw.jpg'
     }
   }
@@ -37,7 +37,7 @@ export default function Index(props) {
             <div>
               <h1>{title}</h1>
               <p>
-                <strong>Full Stack Developer & Content Creator</strong><br />
+                <strong>Desenvolvedor Full Stack JavaScript</strong><br />
                 {description}
               </p>
               <ShortcutHome />

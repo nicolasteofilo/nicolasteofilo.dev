@@ -1,17 +1,17 @@
 const categories = [
   {
-    name: 'Coding',
+    name: 'Codificação',
     items: [
       {
-        title: 'Neovim',
+        title: 'VS Code',
         description:
-         'This is my code editor, I chose it for the agility it provides with shortcuts and insane customization that I can do.',
-        url: 'https://neovim.io/'
+         'Este é o meu editor de código, eu escolhi ele pela imensa agilidade que ele me traz e o grande poder de customização.',
+        url: 'https://code.visualstudio.com/'
       },
       {
         title: 'Fira Code',
         description:
-          'This is definitely my favorite font family, mainly because of the font ligatures.',
+          'Essa é com toda certeza minha fonte favorita quando se trata de programar, principalmente por conta do recurso de font ligatures.',
         url: 'https://github.com/tonsky/FiraCode'
       }
     ]
@@ -22,57 +22,51 @@ const categories = [
       {
         title: 'Gnome Terminal',
         description:
-          "It's a terminal that comes built-in to most Linux distros, and it suits me very well..",
+          "É um terminal que vem integrado na maioria das distros Linux e combina muito bem comigo.",
         url: 'https://gitlab.gnome.org/GNOME/gnome-terminal'
       },
       {
         title: 'Oh My ZSH',
         description:
-          "A collection of ZSH plugins that you install once and you're ready to go.",
+          "Uma coleção de plug-ins ZSH que você instala uma vez e está pronto para usar.",
         url: 'https://ohmyz.sh'
-      },
-      {
-        title: 'Fig',
-        description:
-          'Super cool app that adds VSCode-style autocomplete to your existing terminal',
-        url: 'http://fig.io'
       }
     ]
   },
   {
-    name: 'Apps',
+    name: 'Aplicativos',
     items: [
       {
         title: 'Flameshot',
         description:
-          'This is what I use whenever I need to share and/or highlight screenshots.',
+          'É isso que uso sempre que preciso compartilhar e/ou destacar capturas de tela.',
         url: 'https://flameshot.org/'
       },
       {
         title: 'Figma',
         description:
-          'I never thought something would replace the Adobe suite for me. Figma did.',
+          'Minha ferramenta preferida quando se trata de criar telas e designs.',
         url: 'https://figma.com'
       },
       {
         title: 'Notion',
-        description: 'My personal OS with all the notes from all my projects.',
+        description: 'Meu aplicativo favorito para gerencialmente pessoal e profissional.',
         url: 'https://www.notion.so/'
       }
     ]
   },
   {
-    name: 'Reading',
+    name: 'Leitura',
     items: [
       {
         title: 'Kindle App',
         description:
-          'I particularly use the kindle app for my reading, but I intend to buy the kindle device.',
+          'Eu particulamente gosto muito do kindle para ler e uso ele frequentemente.',
         url: 'https://www.amazon.com.br/b?ie=UTF8&node=17877530011'
       },
       {
         title: 'Spotify',
-        description: 'For most of the audiobooks I listen to, I use Spotify.',
+        description: 'Para ouvir alguns livros em aúdio, eu uso o Spotify.',
         url: 'https://www.spotify.com'
       }
     ]

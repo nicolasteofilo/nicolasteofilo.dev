@@ -20,11 +20,7 @@ import aboutIcon from '../public/static/icons/about.json'
 import homeIcon from '../public/static/icons/home.json'
 import articlesIcon from '../public/static/icons/articles.json'
 import projectsIcon from '../public/static/icons/projects.json'
-import talksIcon from '../public/static/icons/talks.json'
-import podcastsIcon from '../public/static/icons/podcasts.json'
-import investingIcon from '../public/static/icons/investing.json'
 import usesIcon from '../public/static/icons/uses.json'
-import reminderIcon from '../public/static/icons/reminder.json'
 
 export default function CommandBar(props) {
   const copyLinkRef = useRef()
@@ -34,11 +30,7 @@ export default function CommandBar(props) {
   const aboutRef = useRef()
   const articlesRef = useRef()
   const projectsRef = useRef()
-  const talksRef = useRef()
-  const podcastsRef = useRef()
-  const investingRef = useRef()
   const usesRef = useRef()
-  const reminderRef = useRef()
   const router = useRouter()
   const [showToast, setShowToast] = useState(false)
 
@@ -52,75 +44,75 @@ export default function CommandBar(props) {
   const actions = [
     {
       id: 'copy',
-      name: 'Copy Link',
+      name: 'Copiar link',
       shortcut: ['l'],
       keywords: 'copy-link',
-      section: 'General',
+      section: 'Geral',
       perform: copyLink,
       icon: <Lottie lottieRef={copyLinkRef} style={iconSize} animationData={copyLinkIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'email',
-      name: 'Send Email',
+      name: 'Enviar e-mail',
       shortcut: ['e'],
       keywords: 'send-email',
-      section: 'General',
+      section: 'Geral',
       perform: () => router.push('/contact'),
       icon: <Lottie lottieRef={emailRef} style={iconSize} animationData={emailIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'source',
-      name: 'View Source',
+      name: 'Ver código fonte',
       shortcut: ['s'],
       keywords: 'view-source',
-      section: 'General',
+      section: 'Geral',
       perform: () =>
         window.open('https://github.com/nicolasteofilo/nicolasteofilo.dev', '_blank'),
       icon: <Lottie lottieRef={sourceRef} style={iconSize} animationData={sourceIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'home',
-      name: 'Home',
+      name: 'Início',
       shortcut: ['g', 'h'],
       keywords: 'go-home',
-      section: 'Go To',
+      section: 'Ir Para',
       perform: () => router.push('/'),
       icon: <Lottie lottieRef={homeRef} style={iconSize} animationData={homeIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'about',
-      name: 'About',
+      name: 'Sobre',
       shortcut: ['g', 'a'],
       keywords: 'go-about',
-      section: 'Go To',
-      perform: () => router.push('/about'),
+      section: 'Ir Para',
+      perform: () => router.push('/sobre'),
       icon: <Lottie lottieRef={aboutRef} style={iconSize} animationData={aboutIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'articles',
-      name: 'Articles',
+      name: 'Artigos',
       shortcut: ['g', 'b'],
       keywords: 'go-articles',
-      section: 'Go To',
-      perform: () => router.push('/articles'),
+      section: 'Ir Para',
+      perform: () => router.push('/artigos'),
       icon: <Lottie lottieRef={articlesRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'projects',
-      name: 'Projects',
+      name: 'Projetos',
       shortcut: ['g', 'p'],
       keywords: 'go-projects',
-      section: 'Go To',
-      perform: () => router.push('/projects'),
+      section: 'Ir Para',
+      perform: () => router.push('/projetos'),
       icon: <Lottie lottieRef={projectsRef} style={iconSize} animationData={projectsIcon} loop={false} autoplay={false} />,
     },
     {
       id: 'uses',
-      name: 'Uses',
+      name: 'Ferramentas',
       shortcut: ['g', 'u'],
       keywords: 'go-uses',
-      section: 'Go To',
-      perform: () => router.push('/uses'),
+      section: 'Ir Para',
+      perform: () => router.push('/ferramentas'),
       icon: <Lottie lottieRef={usesRef} style={iconSize} animationData={usesIcon} loop={false} autoplay={false} />,
     }
   ]
@@ -131,7 +123,6 @@ export default function CommandBar(props) {
         <KBarPortal>
           <Positioner>
             <Animator>
-              <Search placeholder="Type a command or search…" />
               <RenderResults />
             </Animator>
           </Positioner>
@@ -141,8 +132,8 @@ export default function CommandBar(props) {
       </KBarProvider>
 
       <Toast
-        title="Copied :D"
-        description="You can now share it with anyone."
+        title="Copiado :)"
+        description="Você pode compartilhar com quem quiser!."
         isSuccess={true}
         showToast={showToast}
         setShowToast={setShowToast}

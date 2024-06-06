@@ -89,15 +89,6 @@ export default function CommandBar(props) {
       icon: <Lottie lottieRef={aboutRef} style={iconSize} animationData={aboutIcon} loop={false} autoplay={false} />,
     },
     {
-      id: 'articles',
-      name: 'Artigos',
-      shortcut: ['g', 'b'],
-      keywords: 'go-articles',
-      section: 'Ir Para',
-      perform: () => router.push('/artigos'),
-      icon: <Lottie lottieRef={articlesRef} style={iconSize} animationData={articlesIcon} loop={false} autoplay={false} />,
-    },
-    {
       id: 'projects',
       name: 'Projetos',
       shortcut: ['g', 'p'],

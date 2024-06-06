@@ -9,7 +9,6 @@ export default function Navbar() {
   const router = useRouter()
   const pages = [
     'Sobre',
-    'Artigos',
     'Projetos',
     'Ferramentas',
   ]

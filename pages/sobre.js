@@ -1,16 +1,12 @@
-import { styled } from '../stitches.config'
-import React from 'react'
+import { format, intervalToDuration, parseISO } from 'date-fns'
 import Head from 'next/head'
 import Image from 'next/image'
-import { parseISO, format, intervalToDuration } from 'date-fns'
-import Base from '../layouts/Base'
-import { ButtonPrimary } from '../components/ButtonPrimary'
+import React from 'react'
 import Toast from '../components/Toast'
-import stripHtml from '../lib/strip-html'
 import items from '../data/about'
-import Lottie from 'lottie-react'
-import copyBioIcon from '../public/static/icons/copy-bio.json'
-import downloadIcon from '../public/static/icons/download.json'
+import Base from '../layouts/Base'
+import stripHtml from '../lib/strip-html'
+import { styled } from '../stitches.config'
 
 export async function getStaticProps() {
   const meta = {
@@ -40,7 +36,7 @@ function About(props) {
         <Section>
           <Image
             alt="Nicolas"
-            src="/static/images/nicolas-bw.png"
+            src="/static/images/nicolas.png"
             width="300"
             height="300"
             priority
